@@ -1,0 +1,73 @@
+{
+    "runtime": {
+        "version": "stable"
+    },
+    "platform": {
+        "uuid": "Demo-Hide-Show",
+        "autoShow": false,
+        "defaultWindowOptions": {
+            "contextMenu": true,
+            "preloadScripts": [
+                {
+                    "url": "http://localhost:3000/preload/main-window.js"
+                }
+            ]
+        }
+    },
+    "snapshot": {
+        "windows": [
+            {
+                "saveWindowState": false,
+                "backgroundThrottling": true,
+                "layout": {
+                    "content": [
+                        {
+                            "type": "row",
+                            "id": "no-drop-target",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "Google",
+                                        "url": "http://google.com"
+                                    }
+                                },
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "BBC",
+                                        "url": "http://bbc.co.uk"
+                                    }
+                                },
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "WP",
+                                        "url": "https://www.washingtonpost.com/"
+                                    }
+                                },
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "MainView",
+                                        "url": "http://localhost:3000",
+                                        "detachOnClose": true,
+                                        "contextMenuSettings": {
+                                            "enable": true,
+                                            "devtools": true,
+                                            "reload": false
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
