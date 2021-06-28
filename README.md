@@ -12,7 +12,7 @@ Then to run the app inside openfin.\
 openfin -l -c http://localhost:3000/app.json
 
 ## Points of interest
-1) Notice the "detachOnClose": true property for the view that will be hidden and shown. This tells the runtime to not destroy the underlying view when the platform.close method is called. This ensures that the app keeps running in the background, even when its no loger attached to a platform window.
+1) Notice the "detachOnClose": true property for the view that will be hidden and shown. This tells the runtime to not destroy the underlying view when the platform.close method is called. This ensures that the app keeps running in the background, even when its no longer attached to a platform window.
 2) Take a look at the main-window.js preload script. It created a channelProvider, and registers 2 actions. "hide-me" and "show-me", when called they will remove and add the sender's view from the current view's platform window.
 3) Finally, have a look at the hide-show.js component. This has a button which will communicate with the parent window (via the "hide/show-me" actions). The app also has a ticking state, just to show that the view is not destroyed and created each time it is unloaded from the platform window. 
 
